@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'home/dashboard' => 'home#dashboard'
   get 'home/camera' => 'home#camera'
   get 'home/driver' => 'home#driver'
+  get 'home/reports' => 'home#reports'
 end

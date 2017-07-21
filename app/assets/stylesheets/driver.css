@@ -1,19 +1,22 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+
 .menu {
   position: fixed;
   top: 100;
-  left: 10;
-  height: 5%;
+  /*left: 10;*/
+  height: 10%;
   list-style-type: none;
-  margin: -5;
-  padding: -5;
+  margin: 5;
+  padding: 25;
   // background: #fff4f5;
 }
 
 .test{
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 4em;
 }
 
 .menu li a{
@@ -25,7 +28,7 @@
     text-align:center;
     color: turquoise;
     background: #fff4f5;
-    position: fixed;
+    position: relative;
     border-bottom: 1px solid #ffe2e3;
     transition: background 0.3s ease-in-out;
 }
@@ -40,37 +43,13 @@
   height: 50%;
   font-size: 1.3em;
 }
-.menu li a.map-marker:before {
-  content: "\f041";
+/*.menu li a.address-card:before {
+  content: "\f2bc";
+}*/
+.menu li a.credit-card:before {
+  content: "\f283";
+}
 
-}
-.menu li a.hourglass-half:before {
-  content: "\f252";
-}
-.menu li a.hourglass-end:before {
-  content: "\f253";
-}
-.menu li a.bar-chart:before {
-  content: "\f080";
-}
-.menu li a.money:before {
-  content: "\f0d6";
-}
-.menu li a.question:before {
-  content: "\f128";
-}
-.menu li a:hover{
-  background: #00BFFF;
-  color: #fff;
-}
-.menu li.current a {
-  background: #00BFFF;
-  color: #fff;
-}
-.menu li a.active {
-  background: #00BFFF;
-  color: #fff;
-}
 .menu li a.active:after{
     position:absolute;
     left: 0em;
@@ -78,24 +57,25 @@
     content:"";
     border:2.5em solid transparent;
     border-left-color:#00BFFF;
-    border-width: 2.5em 1em
+    border-width: absolute;
 }
 .menu li{
     position:relative;
 }
+
 .menu li:after{
     content: attr(title);
-    position:relative;
+    position:absolute;
     left:15em;
     top:0;
     height:10em;
-    width: 100em;
+    width: 20em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-transform:uppercase;
     background:#00BFFF;
-    padding:15em;
+    padding:2em;
     transition: all 0.3s ease-in-out;
     visibility:hidden;
     opacity:0;
