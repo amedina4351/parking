@@ -9,59 +9,59 @@ class ParkingSpace < ApplicationRecord
   # 5: Test to see if it contains a particular vehicle
   # 6: Test a vehicle to see if it can park here
 
-    def initialize(parking_lot, fee, number)
-      @parking_lot = parking_lot
-      @fee = fee
-      @number = number
-    end
-
-    def payment
-      ParkingSpacePayment.new self
-    end
-
-    def can_park?(vehicle)
-      !occupied?
-    end
-
-    def contains?(vehicle)
-      self.vehicle == vehicle
-    end
-
-    def number
-      @number
-    end
-
-    def occupied?
-      !vehicle.nil?
-    end
-
-    def park(vehicle)
-      raise ParkingSpaceError "Cannot park vehicle #{vehicle.registration_number}" unless can_park? vehicle
-      self.vehicle = vehicle
-      date_occupied = DateTime.current
-    end
-
-    def vacate
-      payment = nil
-      date_occupied = nil
-      vehicle = nil
-    end
-
-    def vehicle
-      @vehicle
-    end
-
-  private
-
-    def payment=(new_payment)
-      @payment = new_payment
-    end
-
-    def calculate_fee(date)
-      fee.calculate(date)
-    end
-
-    def vehicle=(new_vehicle)
-      @vehicle = new_vehicle
-    end
+  #   def initialize(parking_lot, fee, number)
+  #     @parking_lot = parking_lot
+  #     @fee = fee
+  #     @number = number
+  #   end
+  #
+  #   def payment
+  #     ParkingSpacePayment.new self
+  #   end
+  #
+  #   def can_park?(vehicle)
+  #     !occupied?
+  #   end
+  #
+  #   def contains?(vehicle)
+  #     self.vehicle == vehicle
+  #   end
+  #
+  #   def number
+  #     @number
+  #   end
+  #
+  #   def occupied?
+  #     !vehicle.nil?
+  #   end
+  #
+  #   def park(vehicle)
+  #     raise ParkingSpaceError "Cannot park vehicle #{vehicle.registration_number}" unless can_park? vehicle
+  #     self.vehicle = vehicle
+  #     date_occupied = DateTime.current
+  #   end
+  #
+  #   def vacate
+  #     payment = nil
+  #     date_occupied = nil
+  #     vehicle = nil
+  #   end
+  #
+  #   def vehicle
+  #     @vehicle
+  #   end
+  #
+  # private
+  #
+  #   def payment=(new_payment)
+  #     @payment = new_payment
+  #   end
+  #
+  #   def calculate_fee(date)
+  #     fee.calculate(date)
+  #   end
+  #
+  #   def vehicle=(new_vehicle)
+  #     @vehicle = new_vehicle
+  #   end
   end

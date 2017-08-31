@@ -1,3 +1,4 @@
+
 var prevButton = '<a href="#" class="slide__btn slide__btn--muted slide__prev">Previous</a>';
 var nextButton = '<a href="#" class="slide__btn slide__next">Next</a>';
 var exitButton = '<a href="#" class="slide__btn slide__exit">Close</a>';

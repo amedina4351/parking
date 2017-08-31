@@ -6,14 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
   </head>
 
   <body>
 
-    <%= stylesheet_link_tag "home" %>
-
+    <!-- <%= stylesheet_link_tag "home" %> -->
     <div class='test'>
-    		<img src="/assets/PALMETTO.png"/>
+    		<!-- <img src="/assets/PALMETTO.png"/> -->
+<%= image_tag 'PALMETTO.png' %>
     </div>
 
     <%= yield %>

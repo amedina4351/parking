@@ -10,6 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+#As a user, I would like to see what spaces are available.
+#As a user, I would like to pre-pay for my space.
+#As a user, I would like to select a language preference.
+#As a user, I would like to select what type of space I am parking in. (staff, visitor, etc.)
+#As a user, I would like to receive SMS reminders before my space expires.
+#Blockers: Lots are not numbered. No parking attendants after 6p.
+
 ActiveRecord::Schema.define(version: 20170721173835) do
 
   create_table "available_spaces", force: :cascade do |t|
